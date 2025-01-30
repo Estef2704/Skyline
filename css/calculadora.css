@@ -1,0 +1,127 @@
+/* Importación de fuentes profesionales */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --color-primary: #1C61AD;   /* Azul corporativo */
+    --color-secondary: #F7DB63; /* Amarillo */
+    --color-white: #FFFFFF;     /* Blanco */
+    --color-light-gray: #F4F4F4;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculadora-contenedor {  /* Aseguramos que los estilos solo afecten a este contenedor */
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--color-white);
+}
+
+.calculadora-contenedor h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grupo-datos {
+    background-color: var(--color-light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.grupo-datos:hover {
+    box-shadow: 0 5px 15px rgba(28,97,173,0.1);
+}
+
+.calculadora-contenedor h3 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 5px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    transition: var(--transition);
+    font-family: 'Roboto', sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(247,219,99,0.2);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    font-family: 'Open Sans', sans-serif;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.tabla-resultados {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid var(--color-primary);
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .calculadora {
+        grid-template-columns: 1fr;
+    }
+}
